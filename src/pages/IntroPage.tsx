@@ -18,7 +18,7 @@ const IntroPage = () => {
     <div className="bg-[#1E1E1E] text-white">
       {/* SECTION 1 */}
       <motion.div
-        className="min-h-screen pt-20 flex flex-col items-center justify-center px-4"
+        className="min-h-screen pt-24 flex flex-col items-center justify-center px-4"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -39,7 +39,7 @@ const IntroPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
-          LawEase
+          Law-Chat
         </motion.h1>
 
         <motion.p
@@ -48,7 +48,7 @@ const IntroPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
         >
-          LawEase는 생성형 AI와 법률 데이터를 활용하여 <br />
+          Law-Chat는 생성형 AI와 법률 데이터를 활용하여 <br />
           법률리서치, 판례 검색, 서면 작성 등 다양한 업무를 <br />
           효율적으로 지원하는 서비스입니다.
         </motion.p>
@@ -67,7 +67,7 @@ const IntroPage = () => {
         <motion.img
           src="/assets/intro.png"
           alt="LawEase 소개 이미지"
-          className="rounded-xl shadow-lg w-full max-w-3xl"
+          className="rounded-xl w-full max-w-3xl drop-shadow-[0_10px_25px_rgba(0,0,0,0.3)]"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1 }}
@@ -87,7 +87,7 @@ const IntroPage = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.1, duration: 0.6 }}
         >
-          왜 LawEase인가?
+          왜 Law-Chat인가?
         </motion.h2>
 
         <motion.p

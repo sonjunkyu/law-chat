@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useHeaderColor } from "../context/HeaderContext";
 
 const Header = () => {
   const { isWhite } = useHeaderColor();
+  const navigate = useNavigate();
 
   return (
     <header
@@ -14,19 +16,19 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold">
-          LawEase
+          Law-Chat
         </Link>
 
         <nav className="hidden md:flex space-x-8 text-sm font-semibold">
           <Link to="/" className="hover:text-gray-400">
             HOME
           </Link>
-          <Link to="#" className="hover:text-gray-400">
+          <button
+            onClick={() => navigate("/chatbot")}
+            className="hover:text-gray-400"
+          >
             AI 진단
-          </Link>
-          <Link to="#" className="hover:text-gray-400">
-            상담 사례
-          </Link>
+          </button>
           <Link to="#" className="hover:text-gray-400">
             상담 안내
           </Link>
@@ -37,6 +39,7 @@ const Header = () => {
 
         <div className="flex items-center space-x-3 ">
           <button
+            onClick={() => navigate("/login")}
             className={`px-6 py-2 border border-gray-500 rounded text-sm font-semibold hover:bg-gray-600 ${
               isWhite
                 ? "bg-white text-black border border-gray-400 hover:bg-gray-200"
@@ -46,6 +49,7 @@ const Header = () => {
             로그인
           </button>
           <button
+            onClick={() => navigate("/signup")}
             className={`px-6 py-2 rounded text-sm font-semibold transition-all duration-300 ${
               isWhite
                 ? "bg-black text-white hover:bg-gray-700" // Section2 → 검정 버튼
