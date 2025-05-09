@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { useHeaderColor } from "../context/HeaderContext";
 
 const IntroPage = () => {
@@ -7,6 +8,7 @@ const IntroPage = () => {
   const isInView = useInView(secondSectionRef, {
     margin: "-30% 0px -60% 0px",
   });
+  const navigate = useNavigate();
 
   const { setIsWhite } = useHeaderColor();
 
@@ -59,7 +61,10 @@ const IntroPage = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
         >
-          <button className="px-6 py-2 bg-white text-black font-semibold rounded text-lg hover:bg-gray-200">
+          <button
+            onClick={() => navigate("/signup")}
+            className="px-6 py-2 bg-white text-black font-semibold rounded text-lg hover:bg-gray-200"
+          >
             무료 체험 시작
           </button>
         </motion.div>
