@@ -5,6 +5,7 @@ import IntroPage from "./pages/IntroPage";
 import Chatbot from "./pages/Chatbot";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import MyPage from './pages/MyPage';
 
 function AppRoutes() {
   const location = useLocation();
@@ -20,6 +21,7 @@ function AppRoutes() {
         <Route path="/chatbot" element={<Chatbot />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/mypage" element={<MyPage />} />
       </Routes>
     </>
   );
