@@ -51,6 +51,7 @@ const Login = () => {
             <button
               type="submit"
               className="w-full bg-[#303030] text-white py-3 rounded-md font-semibold hover:bg-gray-600 transition"
+              onClick={() => navigate("/mypage")}
             >
               로그인
             </button>
